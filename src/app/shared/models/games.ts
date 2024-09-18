@@ -3,5 +3,5 @@ export interface Games {
   title:string,
   developer:string,
   release_date:string,
-  character:string;
+  character?:string;
 }
