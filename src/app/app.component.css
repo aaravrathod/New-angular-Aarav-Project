@@ -1,0 +1,35 @@
+.container{
+  background: cadetblue;
+  font-style: italic;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.user-card{
+  border: bisque 2px solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+
+
+.Kratos{
+  padding: 10px;
+  background-color: blanchedalmond;
+}
+
+
+.title{
+  color: blanchedalmond;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.user-card:hover{
+  background-color: #96e3e5;
+}
