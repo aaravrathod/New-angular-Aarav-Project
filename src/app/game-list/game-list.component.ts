@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import {Games} from "../shared/models/games";
 import {NgForOf} from "@angular/common";
+import {GameListItemsComponent} from "../game-list-items/game-list-items.component";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf],
+  imports: [NgForOf, GameListItemsComponent],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })
