@@ -22,8 +22,7 @@ export class GameListComponent {
 
   game_4:Games={id:3,title:"BATMAN:ARKHMAN KNIGHT",developer:"ROCKSTEADY STUDIOS",release_date:"2015 Nov 27",character:"BATMAN"};
 
-  game_5:Games={id:4,title:"BLACKMIGHT WUKONG",developer:"GAME SCEINCE",release_date:"2024 Nov 27",character:"SUN GOD:WUKONG"};
 
-  game_list:Games[]=[this.game_1,this.game_2,this.game_3,this.game_4,this.game_5];
+  game_list:Games[]=[this.game_1,this.game_2,this.game_3,this.game_4];
 
 }
