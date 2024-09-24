@@ -1,4 +1,3 @@
-<app-game-list-items [game]="game_list[0]"></app-game-list-items>
-<app-game-list-items [game]="game_list[1]"></app-game-list-items>
-<app-game-list-items [game]="game_list[2]"></app-game-list-items>
-<app-game-list-items [game]="game_list[3]"></app-game-list-items>
+<div *ngFor="let game of game_list; let i = index">
+<app-game-list-items  [game]="game"  [ngClass] ="{'even-item': i%2===0, 'odd-item':i%2===1}" ></app-game-list-items>
+</div>

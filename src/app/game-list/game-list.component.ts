@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {Games} from "../shared/models/games";
-import {NgForOf} from "@angular/common";
+import {NgClass, NgForOf, NgStyle} from "@angular/common";
 import {GameListItemsComponent} from "../game-list-items/game-list-items.component";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf, GameListItemsComponent],
+  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })
@@ -23,6 +23,7 @@ export class GameListComponent {
   game_4:Games={id:3,title:"BATMAN:ARKHMAN KNIGHT",developer:"ROCKSTEADY STUDIOS",release_date:"2015 Nov 27",character:"BATMAN"};
 
 
-  game_list:Games[]=[this.game_1,this.game_2,this.game_3,this.game_4];
+  game_list:Games[]=[this.game_1,this.game_2,this.game_3,this.game_4  ];
+
 
 }

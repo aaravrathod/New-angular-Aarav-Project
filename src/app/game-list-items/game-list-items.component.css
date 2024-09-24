@@ -1,0 +1,12 @@
+/* This css will allow styles from other components to be taken in*/
+:host{
+  display: block;
+  width: 100%;
+}
+
+h1{
+  border: 2px solid gray;
+
+}
+
+
