@@ -1,16 +1,4 @@
-<div class="container">
-
-  <h1 class="title">Games list</h1>
-  <h1>To check</h1>
-  <div *ngFor="let game of game_list" class="user-card">
-    <h1> NO:{{game.id}}</h1>
-    <h2>Character:{{game.character}}</h2>
-    <h2>Title:{{game.title}}</h2>
-    <h2>Developer:{{game.developer}}</h2>
-    <h2>Release Date:{{game.release_date}}</h2>
-
-  </div>
-  <h2>Important Note:</h2>
-  <h2 *ngIf="game_1.character" class="Kratos"> {{ game_1.character }} is God killer</h2>
-
+<div class="app-container">
+  <h1>{{ title }}</h1>
+  <app-game-list></app-game-list>
 </div>

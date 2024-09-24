@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Games} from "../shared/models/games";
 
 @Component({
   selector: 'app-game-list-items',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class GameListItemsComponent {
 
+  @Input() game?:Games;
 }

@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import {Games} from "./shared/models/games";
 import {NgForOf} from "@angular/common";
 import {NgIf} from "@angular/common";
+import {GameListComponent} from "./game-list/game-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf,NgIf],
+  imports: [RouterOutlet, NgForOf, NgIf, GameListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

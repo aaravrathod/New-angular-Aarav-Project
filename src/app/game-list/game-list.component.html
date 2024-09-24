@@ -1,1 +1,23 @@
-<p>game-list works!</p>
+<div class="container">
+  <h2>Student List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Developer</th>
+      <th>Release date</th>
+      <th>Character</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let game of game_list" >
+      <td>{{ game.id }}</td>
+      <td>{{ game.title }}</td>
+      <td>{{ game.developer }}</td>
+      <td>{{ game.release_date }}</td>
+      <td>{{ game.character }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
