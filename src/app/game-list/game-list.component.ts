@@ -11,7 +11,7 @@ import {GameListItemsComponent} from "../game-list-items/game-list-items.compone
   styleUrl: './game-list.component.css'
 })
 export class GameListComponent {
-
+//
 
   game_1:Games={id:0,title:"GOW",developer:"SANTA MONICO STUDIOS",release_date:"2018 Nov 27",character:"Kratos"};
 
