@@ -1,7 +1,7 @@
 import {Games} from "./models/games";
 
 export const game_list:Games[]=[
-//
+
 
   {id:0,title:"GOW",developer:"SANTA MONICO STUDIOS",release_date:"2018 Nov 27",character:"Kratos"},
 
