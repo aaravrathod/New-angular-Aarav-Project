@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {Games} from "./shared/models/games";
 import {NgForOf} from "@angular/common";
 import {NgIf} from "@angular/common";
@@ -10,7 +10,7 @@ import {GameService} from "./services/game.service";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, GameListComponent, GameListItemsComponent],
+  imports: [RouterOutlet, NgForOf, NgIf, GameListComponent, GameListItemsComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

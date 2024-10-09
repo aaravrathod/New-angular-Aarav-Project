@@ -3,13 +3,13 @@
 /*TODO CSS even-item and odd-item */
 
 .even-item{
-  background-image: url("game2.jpg");
+  background-image: url("../../../public/game2.jpg");
   color: antiquewhite;
 }
 
 .odd-item{
   background-color: teal;
-  background-image: url("game.jpg");
+  background-image: url("../../../public/game.jpg");
   color: antiquewhite;
 }
 

@@ -1,35 +1,14 @@
-.container{
-  background: cadetblue;
-  font-style: italic;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.user-card{
-  border: bisque 2px solid;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  margin-left: 30%;
-  margin-right: 30%;
-
-}
-
-
-.Kratos{
-  padding: 10px;
-  background-color: blanchedalmond;
-}
-
-
-.title{
-  color: blanchedalmond;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.user-card:hover{
+.nav-bar{
+  border: 2px solid black;
   background-color: #96e3e5;
+  font-family: Cursive;
+
 }
+
+.app-container{
+  background-color: antiquewhite;
+  border: 2px solid black;
+  font-family: Cursive;
+}
+
+
