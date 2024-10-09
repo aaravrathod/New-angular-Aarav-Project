@@ -1,4 +1,21 @@
-<div class="app-container">
-<h1>Aarav Assignment 3</h1>
-  <app-game-list-items></app-game-list-items>
+
+<div class="nav-bar">
+  <nav>
+    <h1>
+    <a routerLink="/games" routerLinkActive="active">Game List</a>
+    <br>
+    <a routerLink="/modify-game" routerLinkActive="active">Modify Game</a>
+    <br>
+    <a routerLink="/**" routerLinkActive="active">Game Not found</a>
+    <br>
+    </h1>
+  </nav>
 </div>
+
+<div class="app-container">
+  <h1>{{ title }}</h1>
+
+  <!--router outlet to display routed components -->
+  <router-outlet></router-outlet>
+</div>
+
