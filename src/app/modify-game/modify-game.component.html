@@ -1,0 +1,36 @@
+<h1>modify-game works!</h1>
+<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+  <!-- ID Field -->
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" />
+  </div>
+
+  <div class="form-group">
+    <label for="title">Game Name</label>
+    <input type="text" id="title" formControlName="title" />
+  </div>
+
+  <div class="form-group">
+    <label for="developers">Developers</label>
+    <input type="text" id="developers" formControlName="developers" />
+  </div>
+
+  <div class="form-group">
+    <label for="release_date">release date</label>
+    <input type="text" id="release_date" formControlName="release_date" />
+  </div>
+
+  <div class="form-group">
+    <label for="character">First Name</label>
+    <input type="text" id="character" formControlName="character" />
+  </div>
+
+  <button type="submit">Submit</button>
+
+  <!-- Delete Button (Always Displayed Now) -->
+  <button type="button" (click)="onDelete()">Delete</button>
+
+  <!-- Back Button -->
+  <button type="button" (click)="navigateToGameList()">Back to List</button>
+</form>
