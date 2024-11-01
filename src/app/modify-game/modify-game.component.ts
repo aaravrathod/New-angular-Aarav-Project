@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {GameService} from "../services/game.service";
 import {Games} from "../shared/models/games";
+import {GameListComponent} from "../game-list/game-list.component";
+import {game_list} from "../shared/mockGame.data";
 
 @Component({
   selector: 'app-modify-game',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './modify-game.component.html',
   styleUrl: './modify-game.component.css'
 })
 export class ModifyGameComponent {
   gameForm: FormGroup;
-  game: Games | undefined;
+  game: Games[] | undefined;
 
 
   constructor(
@@ -30,9 +32,33 @@ export class ModifyGameComponent {
        character: ['', Validators.required],
      });
   }
+
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.gameService.getGamesById(+id).subscribe(game => {
+        if(game) {
+          this.game = game;
+          this.gameForm.patchValue(game);
+        }
+      });
+    }
+  }
   navigateToGameList(): void {
     this.router.navigate(['/games']);
   }
+
+  onSubmit(): void {
+    if (this.gameForm.valid){
+      const game: Games = this.gameForm.value;
+      if (game.id){
+        console.log(game.id)
+        this.gameService.updateGame(game).subscribe(()=>this.router.navigate(['/games']))
+      }
+    }
+  }
+
+
 
 
 }

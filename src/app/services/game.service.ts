@@ -15,7 +15,7 @@ export class GameService {
 
   //Getting Game
   getGames(): Observable<Games[]>{
-    return of (game_list);
+    return of (this.Games);
   }
 //Adding Game
   addGame(newGame:Games) : Observable<Games[]>{
@@ -25,7 +25,7 @@ export class GameService {
 
 //Updating Game Data
   updateGame(updatedGame: Games): Observable<Games[]> {
-    const index = this.Games.findIndex(game_list => game_list.id === updatedGame.id);
+    const index = this.Games.findIndex(game => game.id === updatedGame.id);
     if (index !== -1) {
       this.Games[index] = updatedGame;
     }
@@ -34,16 +34,18 @@ export class GameService {
 
   //Delete Game Data
   deleteGame(gameId: number): Observable<Games[]> {
-    this.Games = this.Games.filter(game_list => game_list.id !== gameId);
+    this.Games = this.Games.filter(game => game.id !== gameId);
     return of(this.Games);
   }
 
   //Get Game by ID
   getGamesById(gameId: number): Observable<Games[]> {
-    const game = this.Games.find(game_list => game_list.id === gameId);
+    const game = this.Games.find(game => game.id === gameId);
     return of(game_list);
   }
 
-
+  generateNewId(): number {
+    return this.Games.length > 0 ? Math.max(...this.Games.map(game => game.id)) + 1 : 1;
+  }
 
 }

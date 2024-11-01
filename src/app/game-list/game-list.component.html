@@ -5,5 +5,7 @@
   <h1>CHARACTER:{{game.character}}</h1>
   <h1>RELEASE DATE:{{game.release_date}}</h1>
   <br>
-
+  <button type="button" (click)="onEdit()" routerLink="/modify-game" routerLinkActive="active"  >Edit</button>
+  <!-- Delete Button (Always Displayed Now) -->
+  <button type="button" (click)="onDelete(game)">Delete</button>
 </div>
