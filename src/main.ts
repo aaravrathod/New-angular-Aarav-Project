@@ -8,6 +8,10 @@ import {GameListComponent} from "./app/game-list/game-list.component";
 import {GameListItemsComponent} from "./app/game-list-items/game-list-items.component";
 import {ModifyGameComponent} from "./app/modify-game/modify-game.component";
 import {GameNotFoundComponent} from "./app/game-not-found/game-not-found.component";
+import {HttpClient, provideHttpClient, withInterceptors, withInterceptorsFromDi} from "@angular/common/http";
+import {importProvidersFrom} from "@angular/core";
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./app/services/in-memory-data.service";
 
 
 const routes: Routes=[
@@ -21,5 +25,10 @@ const routes: Routes=[
 
 ]
 
-bootstrapApplication(AppComponent,{providers:[provideRouter(routes)]})
+bootstrapApplication(AppComponent,{providers:[
+  provideHttpClient(withInterceptorsFromDi()),
+  provideRouter(routes),
+  importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{delay:1000}))
+  ],
+})
   .catch((err) => console.error(err));
