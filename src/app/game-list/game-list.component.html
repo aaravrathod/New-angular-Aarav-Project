@@ -9,6 +9,8 @@
 
   <!--Added a currency pipe-->
   <h1>PRICE:{{game.price | currency}}</h1>
+  <!--Added custom pipe-->
+  <h1>CONCATENATE:{{game | concatenate}}</h1>
   <br>
   <button type="button" (click)="onEdit()" routerLink="/modify-game" routerLinkActive="active"  >Edit</button>
   <!-- Delete Button (Always Displayed Now) -->

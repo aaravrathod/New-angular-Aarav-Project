@@ -13,11 +13,12 @@ import {
 import {GameListItemsComponent} from "../game-list-items/game-list-items.component";
 import {GameService} from "../services/game.service";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {ConcatenatePipe} from "../pipes/concatenate.pipe";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe],
+  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, ConcatenatePipe],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })
