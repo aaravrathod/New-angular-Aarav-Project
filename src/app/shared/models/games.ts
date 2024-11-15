@@ -4,5 +4,6 @@ export interface Games {
   developer:string,
   release_date:string,
   character:string;
+  price:number;
   image:string;
 }

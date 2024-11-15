@@ -1,6 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {Games} from "../shared/models/games";
-import {NgClass, NgForOf, NgOptimizedImage, NgStyle} from "@angular/common";
+import {
+  CurrencyPipe,
+  DatePipe,
+  LowerCasePipe,
+  NgClass,
+  NgForOf,
+  NgOptimizedImage,
+  NgStyle,
+  UpperCasePipe
+} from "@angular/common";
 import {GameListItemsComponent} from "../game-list-items/game-list-items.component";
 import {GameService} from "../services/game.service";
 import {RouterLink, RouterLinkActive} from "@angular/router";
@@ -8,7 +17,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink],
+  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })

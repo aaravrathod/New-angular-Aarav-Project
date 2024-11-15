@@ -1,9 +1,14 @@
 <div *ngFor="let game of game_List">
   <img ngSrc="{{game.image}}"  width="80" height="80" priority>
    <h1>ID:{{game.id}}</h1>
-  <h1>TITLE:{{game.title}}</h1>
+  <!--Added a lower case pipe-->
+  <h1>TITLE:{{game.title | lowercase}}</h1>
   <h1>CHARACTER:{{game.character}}</h1>
-  <h1>RELEASE DATE:{{game.release_date}}</h1>
+  <!--Added a date pipe -->
+  <h1>RELEASE DATE:{{game.release_date | date :'short'}}</h1>
+
+  <!--Added a currency pipe-->
+  <h1>PRICE:{{game.price | currency}}</h1>
   <br>
   <button type="button" (click)="onEdit()" routerLink="/modify-game" routerLinkActive="active"  >Edit</button>
   <!-- Delete Button (Always Displayed Now) -->
