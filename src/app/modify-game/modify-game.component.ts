@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {GameService} from "../services/game.service";
@@ -13,9 +13,9 @@ import {game_list} from "../shared/mockGame.data";
   templateUrl: './modify-game.component.html',
   styleUrl: './modify-game.component.css'
 })
-export class ModifyGameComponent {
+export class ModifyGameComponent implements OnInit{
   gameForm: FormGroup;
-  game: Games[] | undefined;
+  game: Games|undefined;
 
 
   constructor(

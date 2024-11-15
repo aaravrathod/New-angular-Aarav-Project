@@ -15,6 +15,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 export class GameListComponent implements OnInit{
   games_columns: string[] = ['id', 'Title', 'Developer', 'Release Date', 'Character'];
   game_List: Games[] = [];
+  error:string| null=null;
 
   constructor(private gameService: GameService) {
 
@@ -23,13 +24,24 @@ export class GameListComponent implements OnInit{
   ngOnInit() {
 
     this.gameService.getGames().subscribe({
-      next: (data: Games[]) => this.game_List = data,
-      error: err => console.error("Error fetching games", err),
-      complete: () => console.log("Game data fetch complete!")
+      next: (data: Games[]) => {
+        this.game_List = data;
+        this.error = null; // Clear any previous errors
+      },
+      error: err => {
+        this.error = 'Error fetching students'; // Set an error message
+        console.error("Error fetching Students", err);
+      },
+      complete: () => console.log("Student data fetch complete!")
     })
 
 
 
+  }
+
+  selectedGame?: Games;
+  selectGame(Game:Games):void{
+    this.selectedGame=Game;
   }
 
 
