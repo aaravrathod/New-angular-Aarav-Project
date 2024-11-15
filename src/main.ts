@@ -17,10 +17,15 @@ import {InMemoryDataService} from "./app/services/in-memory-data.service";
 const routes: Routes=[
   {path:'',redirectTo:'/games',pathMatch:'full' },
   {path:'games', component: GameListComponent},
-  {path:'games/:id', component: GameListItemsComponent},
-  {path:'modify-game', component: ModifyGameComponent},
-  {path: '**', component:GameNotFoundComponent}
-
+  { path: 'games/:id',
+    loadComponent: () =>
+      import('./app/game-list-items/game-list-items.component').then(m => m.GameListItemsComponent) },
+  { path: 'modify-game',
+    loadComponent: () =>
+      import('./app/modify-game/modify-game.component').then(m => m.ModifyGameComponent) },
+  { path: '**',
+    loadComponent: () =>
+      import('./app/game-not-found/game-not-found.component').then(m => m.GameNotFoundComponent) },
 
 
 ]
