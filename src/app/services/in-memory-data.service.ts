@@ -6,7 +6,7 @@ export class InMemoryDataService implements InMemoryDbService{
 
     createDb():{Games: Games[]} {
 
-      const Games:Games[]=[
+      const Games:Games[] = [
 
         {id:0,title:"GOW",developer:"SANTA MONICO STUDIOS",release_date:"2018 Nov 27",character:"Kratos",image:"gow.jpg"},
 
@@ -18,9 +18,7 @@ export class InMemoryDataService implements InMemoryDbService{
         {id:3,title:"BATMAN:ARKHMAN KNIGHT",developer:"ROCKSTEADY STUDIOS",release_date:"2015 Nov 27",character:"BATMAN",image:"batman.webp"}
       ];
 
-
-       return {Games}
-
+      return {Games};
     }
 
 
