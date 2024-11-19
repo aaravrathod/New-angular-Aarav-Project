@@ -14,11 +14,12 @@ import {GameListItemsComponent} from "../game-list-items/game-list-items.compone
 import {GameService} from "../services/game.service";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {ConcatenatePipe} from "../pipes/concatenate.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, ConcatenatePipe],
+  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, ConcatenatePipe, HoverHighlightDirective],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })

@@ -1,4 +1,4 @@
-<div *ngFor="let game of game_List">
+<div *ngFor="let game of game_List" [appHoverHighlight]=" 'cornflowerblue' " >
   <img ngSrc="{{game.image}}"  width="80" height="80" priority>
    <h1>ID:{{game.id}}</h1>
   <!--Added a lower case pipe-->
@@ -12,7 +12,7 @@
   <!--Added custom pipe-->
   <h1>CONCATENATE:{{game | concatenate}}</h1>
   <br>
-  <button type="button" (click)="onEdit()" routerLink="/modify-game" routerLinkActive="active"  >Edit</button>
+  <button type="button" (click)="onEdit()" routerLink="/modify-game" routerLinkActive="active"  [appHoverHighlight]=" 'white' ">Edit</button>
   <!-- Delete Button (Always Displayed Now) -->
-  <button type="button" (click)="onDelete(game)">Delete</button>
+  <button type="button" (click)="onDelete(game) " [appHoverHighlight]=" 'red' ">Delete</button>
 </div>
