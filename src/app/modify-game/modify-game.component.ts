@@ -5,11 +5,13 @@ import {GameService} from "../services/game.service";
 import {Games} from "../shared/models/games";
 import {GameListComponent} from "../game-list/game-list.component";
 import {game_list} from "../shared/mockGame.data";
+import {AutoFocusDirective} from "../directives/auto-focus.directive";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-modify-game',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, RouterLink],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink, AutoFocusDirective, HoverHighlightDirective],
   templateUrl: './modify-game.component.html',
   styleUrl: './modify-game.component.css'
 })
@@ -59,6 +61,5 @@ export class ModifyGameComponent implements OnInit{
   }
 
 
-
-
+    protected readonly onfocus = onfocus;
 }
