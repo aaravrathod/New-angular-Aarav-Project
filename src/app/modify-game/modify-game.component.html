@@ -1,36 +1,41 @@
 <h1>modify-game works!</h1>
-<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="gameForm" (ngSubmit)="onSubmit()" class="mat-form">
   <!-- ID Field -->
   <div class="form-group">
     <!--Added auto focus to the ID field , which changes colour of backGround Field-->
     <label for="id" appAutoFocus>ID</label>
-    <input type="number" id="id" formControlName="id" [appAutoFocus]="'lightblue'" />
+    <!--Added a tool tip-->
+    <input type="number" id="id" formControlName="id" [appAutoFocus]="'lightblue'" matTooltip="Input the ID of the Game"/>
   </div>
  <!--Added directive appHoverHiglight, to change the colour when hovered over the text field-->
   <div class="form-group">
     <label for="title">Game Name</label>
-    <input type="text" id="title" formControlName="title" [appHoverHighlight]="'yellow'" />
+    <!--Added a tool tip-->
+    <input  type="text" id="title" formControlName="title" [appHoverHighlight]="'yellow'" matTooltip="Input the name of the Game"/>
   </div>
   <!--Added directive appHoverHiglight, to change the colour when hovered over the text field-->
   <div class="form-group">
     <label for="developers">Developers</label>
-    <input type="text" id="developers" formControlName="developers" [appHoverHighlight]="'Orange'"/>
+    <!--Added a tool tip-->
+    <input type="text" id="developers" formControlName="developers" [appHoverHighlight]="'Orange'" matTooltip="Input the Developers of the Game"/>
   </div>
   <!--Added directive appHoverHiglight, to change the colour when hovered over the text field-->
   <div class="form-group">
     <label for="release_date">release date</label>
-    <input type="text" id="release_date" formControlName="release_date" [appHoverHighlight]="'blue'" />
+    <!--Added a tool tip-->
+    <input type="text" id="release_date" formControlName="release_date" [appHoverHighlight]="'blue'" matTooltip="Input the release date of the Game"/>
   </div>
   <!--Added directive appHoverHiglight, to change the colour when hovered over the text field-->
   <div class="form-group">
     <label for="character">character</label>
-    <input type="text" id="character" formControlName="character" [appHoverHighlight]="'green'"/>
+    <!--Added a tool tip-->
+    <input type="text" id="character" formControlName="character" [appHoverHighlight]="'green'" matTooltip="Input the chracter of the Game"/>
   </div>
 
-  <button type="submit">Update</button>
+  <button mat-fab extended  type="submit">Update</button>
 
 
 
 
-  <button type="button" (click)="navigateToGameList()">Back to List</button>
+  <button mat-fab extended type="button" (click)="navigateToGameList()">Back to List</button>
 </form>

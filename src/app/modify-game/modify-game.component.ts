@@ -7,11 +7,14 @@ import {GameListComponent} from "../game-list/game-list.component";
 import {game_list} from "../shared/mockGame.data";
 import {AutoFocusDirective} from "../directives/auto-focus.directive";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-modify-game',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, RouterLink, AutoFocusDirective, HoverHighlightDirective],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink, AutoFocusDirective, HoverHighlightDirective, MatInputModule, MatTooltipModule, MatButtonModule],
   templateUrl: './modify-game.component.html',
   styleUrl: './modify-game.component.css'
 })

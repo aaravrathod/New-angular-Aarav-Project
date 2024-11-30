@@ -15,11 +15,13 @@ import {GameService} from "../services/game.service";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {ConcatenatePipe} from "../pipes/concatenate.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, ConcatenatePipe, HoverHighlightDirective],
+  imports: [NgForOf, GameListItemsComponent, NgStyle, NgClass, NgOptimizedImage, RouterLinkActive, RouterLink, DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, ConcatenatePipe, HoverHighlightDirective, MatCardModule, MatButtonModule],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.css'
 })

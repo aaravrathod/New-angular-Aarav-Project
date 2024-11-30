@@ -6,11 +6,13 @@ import {NgIf} from "@angular/common";
 import {GameListComponent} from "./game-list/game-list.component";
 import {GameListItemsComponent} from "./game-list-items/game-list-items.component";
 import {GameService} from "./services/game.service";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, GameListComponent, GameListItemsComponent, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, NgForOf, NgIf, GameListComponent, GameListItemsComponent, RouterLink, RouterLinkActive, MatToolbarModule, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

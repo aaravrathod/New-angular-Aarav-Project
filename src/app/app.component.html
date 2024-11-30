@@ -1,16 +1,14 @@
 
-<div class="nav-bar">
-  <nav>
-    <h1>
-    <a routerLink="/games" routerLinkActive="active">Game List</a>
+<mat-toolbar color="primary">
+
+  <span class="spacer"></span>
+    <button mat-button routerLink="/games" routerLinkActive="active">Game List</button>
     <br>
-    <a routerLink="modify-game" routerLinkActive="active">Modify Game</a>
+  <button mat-button  routerLink="modify-game" routerLinkActive="active">Modify Game</button>
     <br>
-    <a routerLink="/**" routerLinkActive="active">Game Not found</a>
+  <button mat-button  routerLink="/**" routerLinkActive="active">Game Not found</button>
     <br>
-    </h1>
-  </nav>
-</div>
+</mat-toolbar>
 
 <div class="app-container">
   <h1>{{ title }}</h1>
